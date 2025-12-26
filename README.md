@@ -197,3 +197,5 @@ This makes the project ideal for:
 This Snake Game implementation demonstrates how a complete interactive game can be built using plain JavaScript. It combines grid-based movement, real-time rendering, user input handling, persistent storage, and UI state management into a clean and maintainable structure suitable for learning and extension.
 
 ---
+
+# Learned from @Sheryians Coding School
