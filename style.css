@@ -1,0 +1,128 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html,
+body {
+	width: 100%;
+	height: 100%;
+}
+
+:root {
+	/* Background Color */
+	--bg-primary-color: #0c0c0c;
+	--bg-fill-color: #6171ff;
+	--bg-food-color: #f55f45;
+
+	/* Text Color */
+	--text-primary-color: #f0f0f0;
+
+	/* Spacing Variables */
+	--spacing-xsmall: 4px;
+	--spacing-small: 8px;
+	--spacing-medium: 16px;
+	--spacing-large: 24px;
+	--spacing-xlarge: 32px;
+	--spacing-2xlarge: 40px;
+	--spacing-3xlarge: 48px;
+
+	/* Border Color */
+	--border-primary-color: #333333;
+	--border-secondary-color: #252525;
+
+	/* Border Radius */
+	--border-radius-xsmall: 4px;
+	--border-radius-small: 8px;
+	--border-radius-medium: 12px;
+	--border-radius-large: 16px;
+	--border-radius-xlarge: 20px;
+	--border-radius-2xlarge: 24px;
+
+	--border-radius-circle: 50%;
+}
+
+html {
+	background-color: var(--bg-primary-color);
+	color: var(--text-primary-color);
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+		Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+main,
+section {
+	width: 100%;
+	height: 100%;
+}
+
+.btn {
+	padding: var(--spacing-small) var(--spacing-medium);
+	border: none;
+	border-radius: var(--border-radius-small);
+	cursor: pointer;
+	transition: all 0.3s ease;
+}
+.btn:hover {
+	transform: scale(1.1);
+}
+
+section {
+	padding: var(--spacing-2xlarge);
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	gap: var(--spacing-large);
+}
+
+section .infos {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+.info {
+	padding: var(--spacing-small) var(--spacing-medium);
+	border: 1px solid var(--border-primary-color);
+	border-radius: var(--border-radius-small);
+}
+
+.board {
+	border: 1px solid var(--border-primary-color);
+	flex-grow: 1;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(30px, 1fr));
+	grid-template-rows: repeat(auto-fill, minmax(30px, 1fr));
+}
+.block {
+	border: 1px solid var(--border-secondary-color);
+	border-radius: var(--border-radius-circle);
+}
+
+.fill {
+	background-color: var(--bg-fill-color);
+}
+.food {
+	background-color: var(--bg-food-color);
+}
+
+.modal {
+	height: 100vh;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+	background-color: #35353587;
+	backdrop-filter: blur(4px);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.modal .start-game,
+.modal .restart-game {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: var(--spacing-large);
+}
+.modal .restart-game {
+	display: none;
+}
